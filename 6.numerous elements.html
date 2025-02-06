@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Webpage</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #444;
+            padding: 10px;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar ul li {
+            margin: 0 15px;
+        }
+
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #ddd;
+            color: #333;
+        }
+
+        /* Intro Section Styles */
+        .intro {
+            background-color: #e2e2e2;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+        }
+
+        /* Content Section Styles */
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Welcome to My Webpage</h1>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="intro">
+        <h2>Introduction</h2>
+        <p>This is an example webpage with various elements styled using internal CSS.</p>
+    </section>
+
+    <section class="content">
+        <h3>Content Section</h3>
+        <p>This section contains some content that is styled separately using class selectors.</p>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 My Website</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Picture Slider</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 500px;
+            height: 300px;
+            margin: 50px auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .slides {
+            display: flex;
+            width: 500%;
+            transition: transform 1s ease-in-out;
+        }
+
+        .slides img {
+            width: 500px;
+            height: 300px;
+        }
+
+        .radio-buttons {
+            margin-top: 20px;
+        }
+
+        .radio-buttons input {
+            margin: 5px;
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Picture Slider with Radio Button Mapping</h2>
+
+    <div class="slider-container">
+        <div class="slides">
+            <img src=".vscode/f4.jpg" alt="Image 1">
+            <img src=".vscode/f2.jpg" alt="Image 2">
+            <img src=".vscode/flower 1.jpg" alt="Image 3">
+            <img src=".vscode/sparrow.jpg" alt="Image 4">
+            <img src=".vscode/f3.jpg" alt="Image 5">
+        </div>
+    </div>
+
+    <div class="radio-buttons">
+        <input type="radio" name="slider" onclick="changeSlide(0)" checked>
+        <input type="radio" name="slider" onclick="changeSlide(1)">
+        <input type="radio" name="slider" onclick="changeSlide(2)">
+        <input type="radio" name="slider" onclick="changeSlide(3)">
+        <input type="radio" name="slider" onclick="changeSlide(4)">
+    </div>
+
+    <script>
+        function changeSlide(index) {
+            let slides = document.querySelector('.slides');
+            slides.style.transform = `translateX(${-index * 500}px)`;
+        }
+    </script>
+
+</body>
+</html>

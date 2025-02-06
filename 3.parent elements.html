@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative Positioning Example</title>
+
+    <!-- Internal CSS -->
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Parent Container */
+        .parent {
+            width: 400px;
+            height: 200px;
+            background-color: #ddd;
+            margin: auto;
+            position: relative;
+            border: 2px solid black;
+            padding: 20px;
+        }
+
+        /* Child Element - Positioned Relative to Parent */
+        .child {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            position: relative;
+            top: 30px; /* Moves the element 30px down */
+            left: 50px; /* Moves the element 50px to the right */
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* Self-Positioned Element */
+        .self-position {
+            width: 250px;
+            height: 100px;
+            background-color: lightcoral;
+            position: relative;
+            top: 50px; /* Moves the element 50px down from its normal position */
+            left: 20px; /* Moves the element 20px to the right */
+            padding: 15px;
+            margin: 30px auto;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="parent">
+        <h2>Parent Element</h2>
+        <div class="child">
+            This element is positioned <b>relative to the parent</b>.
+        </div>
+    </div>
+
+    <div class="self-position">
+        This element is positioned <b>relative to itself</b>.
+    </div>
+
+</body>
+</html>

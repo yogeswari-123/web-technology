@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nearest Odd Number Finder</title>
+    
+    <!-- CSS Styling -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+        button {
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        #result {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Find the Nearest Odd Number</h2>
+        <input type="number" id="numInput" placeholder="Enter a number">
+        <button onclick="findNearestOdd()">Find Odd</button>
+        <p id="result"></p>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        function findNearestOdd() {
+            let num = parseInt(document.getElementById("numInput").value);
+            
+            if (isNaN(num)) {
+                document.getElementById("result").innerText = "Please enter a valid number.";
+                return;
+            }
+
+            let nearestOdd;
+            
+            if (num % 2 !== 0) {
+                nearestOdd = num; // Already odd
+            } else {
+                nearestOdd = num - 1; // Convert even to nearest lower odd
+            }
+
+            document.getElementById("result").innerText = "Nearest Odd Number: " + nearestOdd;
+        }
+    </script>
+
+</body>
+</html>
