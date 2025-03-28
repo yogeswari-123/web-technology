@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative vs Absolute Positioning</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            margin-top: 50px;
+        }
+
+        /* Parent box for both positioning examples */
+        .parent {
+            width: 400px;
+            height: 200px;
+            background-color: #ddd;
+            position: relative; /* Makes absolute elements refer to this */
+            margin: auto;
+            border: 2px solid black;
+            padding: 20px;
+        }
+
+        /* Relative Positioning */
+        .relative-box {
+            width: 150px;
+            height: 50px;
+            background-color: lightblue;
+            position: relative; /* Moves from its original position */
+            left: 30px;
+            top: 20px;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* Absolute Positioning */
+        .absolute-box {
+            width: 150px;
+            height: 50px;
+            background-color: lightcoral;
+            position: absolute; /* Moves relative to nearest positioned ancestor */
+            right: 10px;
+            bottom: 10px;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Relative vs Absolute Positioning</h2>
+
+        <div class="parent">
+            <div class="relative-box">Relative Box</div>
+            <div class="absolute-box">Absolute Box</div>
+        </div>
+    </div>
+
+</body>
+</html>

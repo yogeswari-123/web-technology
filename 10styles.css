@@ -1,0 +1,30 @@
+/* General Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: url('pic/f5.jpeg') no-repeat center center fixed; /* Add your GIF here */
+    background-size: cover; /* Cover the entire screen */
+    transition: background 2s ease-in-out; /* Smooth transition effect */
+    opacity: 0.9; /* Set transparency */
+}
+
+/* Hover Effect for Dynamic Transition */
+body:hover {
+    background-size: 150%; /* Increase size on hover */
+    opacity: 0.7; /* Increase transparency on hover */
+}
+
+/* Styling for Text Content */
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 100px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}

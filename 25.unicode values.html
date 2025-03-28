@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript String Object Operations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+        }
+        h2 {
+            color: #007bff;
+        }
+        p {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>JavaScript String Object Operations</h2>
+        <p id="charAtResult"></p>
+        <p id="charCodeAtResult"></p>
+        <p id="concatResult"></p>
+        <p id="fromCharCodeResult"></p>
+        <p id="toUpperCaseResult"></p>
+    </div>
+
+    <script>
+        // Define a sample string
+        let str = "Hello, World!";
+        let str2 = " Welcome to JavaScript.";
+
+        // (1) Returning the character at a specified location (index 7)
+        document.getElementById("charAtResult").innerHTML = "Character at index 7: " + str.charAt(7);
+
+        // (2) Returning the Unicode of the character at the specified index (index 7)
+        document.getElementById("charCodeAtResult").innerHTML = "Unicode at index 7: " + str.charCodeAt(7);
+
+        // (3) Joining two or more strings and returning a new joined string
+        document.getElementById("concatResult").innerHTML = "Concatenated String: " + str.concat(str2);
+
+        // (4) Converting Unicode value (65) to a string
+        document.getElementById("fromCharCodeResult").innerHTML = "Character from Unicode 65: " + String.fromCharCode(65);
+
+        // (5) Converting a string to uppercase letters
+        document.getElementById("toUpperCaseResult").innerHTML = "Uppercase String: " + str.toUpperCase();
+    </script>
+
+</body>
+</html>

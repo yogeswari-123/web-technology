@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f2f2f2;
+            margin-top: 50px;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            width: 50%;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeIn 2s forwards;
+        }
+
+        h1 {
+            color: #333;
+            animation: bounce 2s infinite alternate;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        img {
+            width: 200px;
+            margin-top: 20px;
+            animation: rotateImage 5s linear infinite;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
+        }
+
+        @keyframes rotateImage {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to Animated Web Page</h1>
+        <p>This page demonstrates animated effects using CSS and JavaScript.</p>
+        <button onclick="changeText()">Click Me</button>
+        <img id="animatedImg" src="pic/f1.jpeg" alt="Rotating Image">
+    </div>
+
+    <script>
+        function changeText() {
+            document.querySelector("p").innerHTML = "You clicked the button!";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor Counter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        h2 {
+            color: rgb(24, 113, 106);
+        }
+        #counter {
+            font-size: 24px;
+            font-weight: bold;
+            color: rgb(128, 0, 105);
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Welcome to Our Website</h2>
+    <p><strong>Total Visitors:</strong> <span id="counter">0</span></p>
+
+    <script>
+        // Function to update visitor count in localStorage
+        function updateVisitorCount() {
+            let count = localStorage.getItem("visitorCount");
+            
+            if (count === null) {
+                count = 3; // First visit
+            } else {
+                count = parseInt(count) + 1; // Increment count
+            }
+
+            // Store updated count in localStorage
+            localStorage.setItem("visitorCount", count);
+
+            // Display updated count
+            document.getElementById("counter").textContent = count;
+        }
+
+        // Call function when page loads
+        updateVisitorCount();
+    </script>
+
+</body>
+</html>

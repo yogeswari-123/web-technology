@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background GIF with CSS Transition</title>
+    <style>
+        /* Global styles */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-image: url('"C:\xampp\htdocs\Осенние листья.gif"'); /* Replace with your GIF URL */
+            background-size: cover;
+            background-position: center;
+            transition: background-size 2s ease, opacity 2s ease; /* Apply transition for size and opacity */
+        }
+
+        /* Hover effect to change size, opacity, and apply transition */
+        body:hover {
+            background-size: 120%;  /* Increase size when hovered */
+            opacity: 0.7;  /* Make the background slightly transparent */
+        }
+
+        /* Content inside the page */
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #12287f;
+            text-align: center;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Welcome to My Page</h1>
+        <p>Enjoy the background GIF effect!</p>
+    </div>
+</body>
+</html>

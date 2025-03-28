@@ -1,0 +1,21 @@
+/* External CSS File: styles.css */
+
+/* Applying Background Image */
+body {
+    background-image: url('pic/f8.jpeg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+}
+
+/* Styling the content */
+.content {
+    background: rgba(0, 0, 0, 0.6); /* Adding transparency to make text readable */
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 50px;
+}

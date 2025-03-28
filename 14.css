@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.container {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin: 50px auto;
+    border: 2px solid black;
+}
+
+.box {
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+}
+
+.one {
+    background-color: red;
+    top: 50px;
+    left: 50px;
+}
+
+.two {
+    background-color: blue;
+    top: 70px;  /* Overlapping Position */
+    left: 80px;
+    z-index: 1; /* Brings this element to the front */
+}

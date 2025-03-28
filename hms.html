@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="nav.css">
+    <title>AVENUE: Hotel Management System</title>
+</head>
+<body>
+    <p class="red">
+        <img src="main.jpg" alt="Hotel Image">
+    </p>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <ul>
+        <b>
+            <li>
+                <a href="#" onclick="AV()">HOME</a>
+                <ul>
+                    <li><a href="manager.html">MANAGEMENT CELL</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="reception.html">RECEPTION</a>
+                <ul>
+                    <li><a href="#" onclick="abc()">GUEST & SERVICES</a></li>
+                </ul>
+            </li>
+            <li>
+                <a>BOOKINGS</a>
+                <ul>
+                    <li><a href="booking.html">BOOK NOW</a></li>
+                    <li><a href="trans.html">TRANSPORTATION</a></li>
+                    <li><a href="guestroom.html">GUEST ROOMS</a></li>
+                    <li><a href="pool.html">POOL</a></li>
+                    <li><a href="TRY.html">GAME SLOTS</a></li>
+                    <li><a href="partyhal.html">PARTY HALL</a></li>
+                    <li><a href="wedding hall.html">WEDDING HALL</a></li>
+                    <li><a href="meetinghall.html">MEETING HALL</a></li>
+                </ul>
+            </li>
+            <li>
+                <a>GALLERY</a>
+                <ul>
+                    <li><a href="gallery.html">OVERVIEW</a></li>
+                    <li><a href="VISIT.html">CELEBS VISIT</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">LOGIN</a>
+                <ul>
+                    <li><a href="login.html">GUEST LOGIN</a></li>
+                    <li><a href="login1.html">STAFF LOGIN</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">CONTACT US</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+        </b>
+    </ul>
+    <br><br>
+
+    <div class="alpha">
+        <img src="bed2.jpg" id="e" alt="Bed">
+        <div class="alpha-m">
+            <p1>OFFER<br><del>Rs.5999</del><br>Just <ins>Rs.3999</ins></p1>
+        </div>
+    </div>
+
+    <div class="beta">
+        <img src="login.jpg" id="f" alt="Login">
+        <div class="beta-n">
+            <p2>POOLs<br>and <br>RESORT</p2>
+        </div>
+    </div>
+
+    <div class="game">
+        <img src="game.jpg" id="x" alt="Game">
+        <div class="game-g">
+            <p3>SPACIOUS<br>indoor<br>GAMing</p3>
+        </div>
+    </div>
+
+    <img src="q.jpg" id="r1" alt="Q">
+    <img src="1g.gif" id="f1" alt="GIF 1">
+    <img src="2g.gif" id="b1" alt="GIF 2">
+
+    <script>
+        function AV() {
+            alert(":-) YOU ARE ON HOME PAGE :-)")
+        }
+
+        function abc() {
+            var a = prompt("Enter Guest ID")
+            if (a == "") {
+                alert("Please enter guest ID")
+            } else if (a == "ABCD") {
+                window.open("guest.html")
+            } else {
+                alert("Invalid guest ID")
+            }
+        }
+    </script>
+</body>
+</html>
+

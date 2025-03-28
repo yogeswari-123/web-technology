@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Job Portal Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            width: 50%;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+        h2 {
+            color: #333;
+        }
+        input, select {
+            width: 90%;
+            padding: 8px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: darkblue;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Student Job Portal Registration</h2>
+        <form id="registrationForm" onsubmit="return validateForm()">
+            <input type="text" id="name" placeholder="Full Name">
+            <div class="error" id="nameError"></div>
+
+            <input type="email" id="email" placeholder="Email">
+            <div class="error" id="emailError"></div>
+
+            <input type="text" id="phone" placeholder="Phone Number">
+            <div class="error" id="phoneError"></div>
+
+            <input type="password" id="password" placeholder="Password">
+            <div class="error" id="passwordError"></div>
+
+            <select id="qualification">
+                <option value="">Select Qualification</option>
+                <option value="B.Tech">B.Tech</option>
+                <option value="M.Tech">M.Tech</option>
+                <option value="MBA">MBA</option>
+                <option value="B.Sc">B.Sc</option>
+            </select>
+            <div class="error" id="qualificationError"></div>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            let isValid = true;
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+            let password = document.getElementById("password").value;
+            let qualification = document.getElementById("qualification").value;
+
+            // Reset error messages
+            document.getElementById("nameError").innerHTML = "";
+            document.getElementById("emailError").innerHTML = "";
+            document.getElementById("phoneError").innerHTML = "";
+            document.getElementById("passwordError").innerHTML = "";
+            document.getElementById("qualificationError").innerHTML = "";
+
+            // Name validation (Only letters)
+            let namePattern = /^[A-Za-z\s]+$/;
+            if (name.trim() === "" || !namePattern.test(name)) {
+                document.getElementById("nameError").innerHTML = "Enter a valid name (letters only).";
+                isValid = false;
+            }
+
+            // Email validation
+            let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailPattern.test(email)) {
+                document.getElementById("emailError").innerHTML = "Enter a valid email.";
+                isValid = false;
+            }
+
+            // Phone validation (10 digits)
+            let phonePattern = /^[0-9]{10}$/;
+            if (!phonePattern.test(phone)) {
+                document.getElementById("phoneError").innerHTML = "Enter a valid 10-digit phone number.";
+                isValid = false;
+            }
+
+            // Password validation (Minimum 6 characters)
+            if (password.length < 6) {
+                document.getElementById("passwordError").innerHTML = "Password must be at least 6 characters.";
+                isValid = false;
+            }
+
+            // Qualification validation
+            if (qualification === "") {
+                document.getElementById("qualificationError").innerHTML = "Please select a qualification.";
+                isValid = false;
+            }
+
+            return isValid;
+        }
+    </script>
+
+</body>
+</html>

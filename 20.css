@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+}
+
+.emoji {
+    font-size: 50px; /* Fixed size for emojis */
+    margin: 20px;
+    display: inline-block;
+    padding: 10px;
+}
+
+/* Different positioning styles */
+.static {
+    position: static;
+}
+
+.relative {
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.absolute {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+
+.fixed {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.sticky {
+    position: sticky;
+    top: 10px;
+    background-color: yellow;
+    padding: 5px;
+}

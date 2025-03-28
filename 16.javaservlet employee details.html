@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Employee</title>
+</head>
+<body>
+    <h2>Add New Employee</h2>
+    <form action="EmployeeDetailsServlet" method="POST">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="position">Position:</label><br>
+        <input type="text" id="position" name="position" required><br><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <input type="submit" value="Add Employee">
+    </form>
+    <br>
+    <a href="EmployeeDetailsServlet">View Employee List</a>
+</body>
+</html>

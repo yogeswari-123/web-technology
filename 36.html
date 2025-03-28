@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image Example</title>
+    <style>
+        /* External CSS simulated inside the same file */
+        
+        /* Background image for the entire page */
+        body {
+            background-image: url('pic/f4.jpg'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Styling for the main content */
+        .content {
+            padding: 100px;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 100px;
+        }
+
+        /* Internal CSS: Background for a specific section */
+        .section {
+            background-image: url('pic/f4.jpeg'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 50px;
+            border-radius: 10px;
+            color: white;
+            margin: 20px auto;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <h1>Welcome to My Web Page</h1>
+        <p>This page has a background image applied to the entire page.</p>
+    </div>
+
+    <div class="section">
+        <h2>Special Section</h2>
+        <p>This section has a different background image.</p>
+    </div>
+
+</body>
+</html>
